@@ -41,3 +41,7 @@ The figure below shows a sample overview of the output of data scraping, process
 ![image](https://user-images.githubusercontent.com/118980393/205436279-faf84214-7014-46d0-8b53-1a1c9bfed1d7.png)
 
 
+### Other components 
+An extra component for error catching was implemented to warn the user in the event a selected category does not contain any information or an invalid input is supplied.
+![image](https://user-images.githubusercontent.com/118980393/205436358-88a77477-b9a0-4a58-8f50-5ddf313a3893.png)
+![image](https://user-images.githubusercontent.com/118980393/205436366-27e9b8f9-1be7-4fbc-8bbc-039c270d5ef4.png)
