@@ -1,6 +1,6 @@
 '''Data Acquisition and transformation pipeline'''
 def movie_scraper():
-    groups = ["top_100","top_250","top_1000","bottom_100","bottom_250","bottom_1000,oscar_winner",
+    groups = ["top_100","top_250","top_1000","bottom_100","bottom_250","bottom_1000&groups=oscar_winner",
      "emmy_winner","golden_globe_winner","oscar_nominee","emmy_nominee","golden_globe_nominee","best_picture_winner",
      "best_director_winner","oscar_best_picture_nominees","oscar_best_director_nominees",
      "national_film_preservation_board_winner","razzie_winner","razzie_nominee"]
@@ -15,11 +15,11 @@ def movie_scraper():
     group = groups[group_index]
     url = 'https://www.imdb.com/search/title/?count='+str(num)+'&groups='+group+'&sort=user_rating'
 
-    def get_html_data(url):
+    def get_page_contents(url):
         page = requests.get(url, headers={"Accept-Language": "en-US"})
         return BeautifulSoup(page.text, "html.parser")
     try:
-        soup = get_html_data(url)
+        soup = get_page_contents(url)
         #extract data elements
         movies = soup.findAll('div', class_='lister-item-content')
         titles = []
@@ -84,11 +84,8 @@ def movie_scraper():
         print('===============================================================================================================================')
         #wsave data to a mysql database
         #movie_data.to_sql(con=con, name=groups[group_index], if_exists='replace', flavor='mysql')
-        movie_data.to_csv(group+".csv", index = False)
-        print("Data saved successfully!")
-        return movie_data
     except:
         print("The selected category does not have any movies")
-        
+        return movie_data
         
 data = movie_scraper()
