@@ -28,3 +28,16 @@ The resulting URL is passed to the get_page_contents(url) function which returns
 The collected data is transformed into the correct data types:
 ![image](https://user-images.githubusercontent.com/118980393/205436208-8ba1bf2f-2b9a-4e6b-8a42-764f33717372.png)
 
+### Data Analysis
+
+The  last  component  of  the  pipeline  is  analysis  which  involved  generating  general information regarding the data that was acquired. The information include: i. Best movie (highest rating) in the selected category
+ii. Rating of the movie
+iii. Revenue by the movie
+iv. Top 10 movies by revenue
+v. Top 10 movies by ratings
+
+The figure below shows a sample overview of the output of data scraping, processing, and analysis.
+
+![image](https://user-images.githubusercontent.com/118980393/205436279-faf84214-7014-46d0-8b53-1a1c9bfed1d7.png)
+
+
