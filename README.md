@@ -18,9 +18,11 @@ The movie_scraper function allows a user to supply two inputs, i.e., the movie g
 
 ### Data Scraping
 After obtaining the user input, a url is specified which incorporates the user input as paramaters for the group and count of items to be scrapped.
+
 ![image](https://user-images.githubusercontent.com/118980393/205435893-b4e16601-7c79-4d72-9bf4-73832fdecb22.png)
 
 The resulting URL is passed to the get_page_contents(url) function which returns a soup element. Data from the soup element is then saved into separate lists.
+
 ![image](https://user-images.githubusercontent.com/118980393/205436073-c8b1e0c7-3b51-4c6b-9f8e-0f9948ec1dd4.png)
 
 
