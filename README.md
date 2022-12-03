@@ -24,4 +24,7 @@ The resulting URL is passed to the get_page_contents(url) function which returns
 
 ![image](https://user-images.githubusercontent.com/118980393/205436073-c8b1e0c7-3b51-4c6b-9f8e-0f9948ec1dd4.png)
 
+### Data Storage
+The collected data is transformed into the correct data types:
+![image](https://user-images.githubusercontent.com/118980393/205436208-8ba1bf2f-2b9a-4e6b-8a42-764f33717372.png)
 
